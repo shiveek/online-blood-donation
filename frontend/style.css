@@ -1,0 +1,68 @@
+/* style.css - main site styles */
+:root{
+  --accent: #e60000;
+  --accent-2: #ff416c;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ffefef 0%, #fff5f7 100%);
+  color:#102a43;
+  min-height:100vh;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:20px}
+
+.site-header{background:var(--accent);color:#fff;padding:12px 0;box-shadow:0 4px 14px rgba(0,0,0,0.12)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:22px;margin:0 10px;color:#fff}
+.logo span{color:#ffde59}
+.nav a{color:#fff;text-decoration:none;margin-left:14px;font-weight:600}
+.nav a.active{color:#ffde59}
+
+/* Hero */
+.hero{padding:80px 0;text-align:center;background-image:linear-gradient( rgba(246, 76, 76, 0.08), rgba(255,255,255,0));}
+.hero h2{font-size:36px;margin-bottom:10px}
+.hero p{max-width:720px;margin:0 auto;color:var(--muted);margin-bottom:18px}
+.btn{background:var(--accent);color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:700;transition:transform .15s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(230,0,0,0.12)}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(230,0,0,0.12)}
+
+/* Info cards */
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:40px 0}
+.card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.04)}
+.card h3{margin:0 0 8px 0}
+
+/* Forms & sections */
+.section{padding:40px 0}
+.form-section{display:flex;justify-content:center;padding:40px 0}
+.form-card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.05);max-width:720px;width:100%}
+.form-row{margin-bottom:12px}
+.form-row.two{display:flex;gap:12px}
+.form-row.two input,.form-row.two select{flex:1}
+input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e9eef7;outline:none;font-size:14px}
+input:focus,select:focus,textarea:focus{box-shadow:0 6px 20px rgba(230,0,0,0.08);border-color:var(--accent)}
+
+/* small header for register */
+.small-header{background:transparent;padding:14px 0}
+
+/* footer */
+.site-footer{background:#0f1724;color:#d1d5db;padding:16px 0;text-align:center;margin-top:30px}
+
+/* utility */
+.muted{color:var(--muted);font-size:14px}
+
+/* responsive */
+@media (max-width:980px){
+  .info{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .info{grid-template-columns:1fr}
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .nav a{display:inline-block;margin:8px 8px 0 0}
+  .form-row.two{flex-direction:column}
+  .hero h2{font-size:26px}
+}
